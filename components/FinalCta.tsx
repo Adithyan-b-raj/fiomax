@@ -24,7 +24,7 @@ export function FinalCta() {
               </div>
 
               <div className="flex flex-col items-start gap-6 lg:items-end">
-                <WhatsAppButton className="w-full justify-center sm:w-auto" />
+                <WhatsAppButton className="w-full sm:w-auto" />
                 <div className="flex items-center gap-4">
                   <AvatarStack count={5} />
                   <div className="leading-tight text-ink-950">

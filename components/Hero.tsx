@@ -117,7 +117,7 @@ export function Hero() {
               animate="show"
               className="mt-5 sm:mt-7"
             >
-              <WhatsAppButton className="w-full justify-center py-3 text-base sm:w-auto sm:py-3.5" />
+              <WhatsAppButton className="w-full sm:w-auto" />
             </motion.div>
 
             {/* Social proof */}

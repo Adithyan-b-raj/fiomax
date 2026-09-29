@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 
 const WHATSAPP_URL = "https://chat.whatsapp.com/ESFA9jQV7WkIidGXQlhP7v?mode=ac_t";
+const WHATSAPP_CONTACT_URL = "https://wa.me/918590967062";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -12,17 +13,43 @@ function WhatsAppIcon({ className }: { className?: string }) {
 
 export function WhatsAppButton({
   label = "Join WhatsApp Community",
+  contactLabel = "Contact",
   className,
 }: {
   label?: string;
+  contactLabel?: string;
   className?: string;
 }) {
   return (
-    <a href={WHATSAPP_URL} className={`btn-whatsapp group ${className ?? ""}`}>
-      <WhatsAppIcon className="h-6 w-6 shrink-0" />
-      <span>{label}</span>
-      <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-    </a>
+    <div
+      className={`inline-flex items-stretch overflow-hidden rounded-full bg-whatsapp shadow-[0_12px_30px_-8px_rgba(37,211,102,0.6)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-8px_rgba(37,211,102,0.7)] ${
+        className ?? ""
+      }`}
+    >
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex flex-1 items-center justify-center gap-2 py-3 pl-4 pr-3 text-xs font-semibold text-white transition-colors hover:bg-black/10 focus:outline-none focus-visible:bg-black/15 sm:gap-2.5 sm:py-3.5 sm:pl-6 sm:pr-4 sm:text-base"
+      >
+        <WhatsAppIcon className="h-5 w-5 shrink-0 sm:h-6 sm:w-6" />
+        <span className="whitespace-nowrap">{label}</span>
+      </a>
+
+      {/* Divider matching sketch */}
+      <div className="flex items-center" aria-hidden>
+        <span className="h-5 w-[1.5px] rounded-full bg-white/35 sm:h-6" />
+      </div>
+
+      <a
+        href={WHATSAPP_CONTACT_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center py-3 pl-3 pr-4 text-xs font-semibold text-white transition-colors hover:bg-black/10 focus:outline-none focus-visible:bg-black/15 sm:py-3.5 sm:pl-4 sm:pr-6 sm:text-base"
+      >
+        <span className="whitespace-nowrap">{contactLabel}</span>
+      </a>
+    </div>
   );
 }
 
@@ -67,4 +94,4 @@ export function AvatarStack({
   );
 }
 
-export { WHATSAPP_URL };
+export { WHATSAPP_URL, WHATSAPP_CONTACT_URL };
