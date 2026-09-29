@@ -74,4 +74,4 @@ export function AvatarStack({
   );
 }
 
-export { WHATSAPP_URL, WHATSAPP_CONTACT_URL };
+export { WHATSAPP_URL, WHATSAPP_CONTACT_URL, INSTAGRAM_URL };
