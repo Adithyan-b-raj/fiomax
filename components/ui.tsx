@@ -45,8 +45,9 @@ export function WhatsAppButton({
         href={WHATSAPP_CONTACT_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center py-3 pl-3 pr-4 text-xs font-semibold text-white transition-colors hover:bg-black/10 focus:outline-none focus-visible:bg-black/15 sm:py-3.5 sm:pl-4 sm:pr-6 sm:text-base"
+        className="flex items-center justify-center gap-1.5 py-3 pl-3 pr-4 text-xs font-semibold text-white transition-colors hover:bg-black/10 focus:outline-none focus-visible:bg-black/15 sm:gap-2 sm:py-3.5 sm:pl-4 sm:pr-6 sm:text-base"
       >
+        <WhatsAppIcon className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" />
         <span className="whitespace-nowrap">{contactLabel}</span>
       </a>
     </div>
