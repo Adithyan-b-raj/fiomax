@@ -77,14 +77,14 @@ export function AvatarStack({
       {Array.from({ length: count }).map((_, i) => (
         <div
           key={i}
-          className={`relative h-8 w-8 sm:h-9 sm:w-9 rounded-full border-2 ${borderColor} bg-gradient-to-br ${
+          className={`relative h-8 w-8 sm:h-9 sm:w-9 overflow-hidden rounded-full border-2 ${borderColor} bg-gradient-to-br ${
             AVATAR_TONES[i % AVATAR_TONES.length]
           } shadow-sm`}
         >
           <svg viewBox="0 0 40 40" className="h-full w-full text-white/90">
-            <circle cx="20" cy="15" r="7" fill="currentColor" opacity="0.85" />
+            <circle cx="20" cy="14" r="6.5" fill="currentColor" opacity="0.85" />
             <path
-              d="M6 38c0-8 6.5-13 14-13s14 5 14 13"
+              d="M7 36c0-7 6-12 13-12s13 5 13 12"
               fill="currentColor"
               opacity="0.85"
             />
