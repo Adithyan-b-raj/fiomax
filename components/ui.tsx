@@ -35,13 +35,21 @@ const AVATAR_TONES = [
 ];
 
 /** Overlapping circular avatars used for social proof. */
-export function AvatarStack({ count = 5 }: { count?: number }) {
+export function AvatarStack({
+  count = 5,
+  borderColor = "border-white",
+  className,
+}: {
+  count?: number;
+  borderColor?: string;
+  className?: string;
+}) {
   return (
-    <div className="flex -space-x-3">
+    <div className={`flex -space-x-2 sm:-space-x-2.5 ${className ?? ""}`}>
       {Array.from({ length: count }).map((_, i) => (
         <div
           key={i}
-          className={`relative h-11 w-11 rounded-full border-2 border-white bg-gradient-to-br ${
+          className={`relative h-8 w-8 sm:h-9 sm:w-9 rounded-full border-2 ${borderColor} bg-gradient-to-br ${
             AVATAR_TONES[i % AVATAR_TONES.length]
           } shadow-sm`}
         >

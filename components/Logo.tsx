@@ -20,7 +20,7 @@ export function Logo({ variant = "light", className }: LogoProps) {
       alt="Fiomax Digital Services"
       priority={variant === "light"}
       sizes="240px"
-      className={`h-10 w-auto select-none sm:h-11 ${className ?? ""}`}
+      className={`h-9 w-auto select-none sm:h-11 ${className ?? ""}`}
     />
   );
 }

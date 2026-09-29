@@ -1,17 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Crown, Tag, ShieldCheck, Zap, Headphones } from "lucide-react";
+import { Crown, Tv, Palette, Sparkles, GraduationCap } from "lucide-react";
 import { Logo } from "@/components/Logo";
 import { WhatsAppButton, AvatarStack } from "@/components/ui";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { FloatingIcons } from "@/components/FloatingIcons";
 
 const PILLS = [
-  { icon: Tag, label: "Affordable\nPrices" },
-  { icon: ShieldCheck, label: "Trusted &\nVerified" },
-  { icon: Zap, label: "Instant\nAccess" },
-  { icon: Headphones, label: "Support\n& Guidance" },
+  { icon: Tv, label: "OTT Subscriptions" },
+  { icon: Palette, label: "Designing tools" },
+  { icon: Sparkles, label: "AI Tools" },
+  { icon: GraduationCap, label: "Learning Tool" },
 ];
 
 const fadeUp = {
@@ -31,7 +31,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-grid-faint opacity-60" />
       <div className="absolute -right-40 top-1/4 h-96 w-96 rounded-full bg-brand-500/20 blur-3xl" />
 
-      <div className="container-page relative z-10 flex flex-1 flex-col pb-10 pt-5 lg:pb-8">
+      <div className="container-page relative z-10 flex flex-1 flex-col pb-8 pt-4 sm:pt-5 lg:pb-8">
         {/* Top bar */}
         <motion.header
           initial={{ opacity: 0, y: -16 }}
@@ -40,17 +40,17 @@ export function Hero() {
           className="flex items-center justify-between"
         >
           <Logo variant="light" className="xl:-ml-10 2xl:-ml-16" />
-          <div className="flex items-center gap-2 text-sm font-medium">
-            <span className="relative flex h-2.5 w-2.5">
+          <div className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-medium text-white/80 backdrop-blur-sm sm:gap-2 sm:px-3 sm:py-1.5 sm:text-sm">
+            <span className="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-whatsapp opacity-75" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-whatsapp" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-whatsapp sm:h-2.5 sm:w-2.5" />
             </span>
-            Trusted by 2,500+ Users
+            <span>Trusted by 2,500+</span>
           </div>
         </motion.header>
 
         {/* Main grid */}
-        <div className="mt-8 grid flex-1 items-center gap-10 lg:mt-4 lg:grid-cols-[1.15fr_0.85fr] lg:gap-4">
+        <div className="mt-5 grid flex-1 items-center gap-8 sm:mt-8 lg:mt-4 lg:grid-cols-[1.15fr_0.85fr] lg:gap-4">
           {/* Left: copy */}
           <div className="max-w-2xl xl:-ml-10 2xl:-ml-16">
             <motion.div
@@ -58,9 +58,9 @@ export function Hero() {
               variants={fadeUp}
               initial="hidden"
               animate="show"
-              className="inline-flex items-center gap-2 rounded-full bg-brand-gradient px-4 py-2 text-sm font-bold uppercase tracking-wide text-ink-950 shadow-glow"
+              className="inline-flex items-center gap-1.5 rounded-full border border-brand-500/30 bg-brand-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-400 backdrop-blur-sm sm:gap-2 sm:px-4 sm:py-1.5 sm:text-sm"
             >
-              <Crown className="h-4 w-4" />
+              <Crown className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
               Premium Tools at Low Prices
             </motion.div>
 
@@ -69,10 +69,10 @@ export function Hero() {
               variants={fadeUp}
               initial="hidden"
               animate="show"
-              className="mt-4 font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-[2.9rem] xl:text-[3.25rem]"
+              className="mt-3.5 font-display text-[1.95rem] font-extrabold leading-[1.12] tracking-tight sm:mt-4 sm:text-5xl sm:leading-[1.05] lg:text-[2.9rem] xl:text-[3.25rem]"
             >
-              Need Digital
-              Subscriptions <br className="hidden sm:block" />
+              Need Digital Subscriptions{" "}
+              <br className="hidden sm:block" />
               <span className="text-gradient sm:whitespace-nowrap">at Affordable Prices?</span>
             </motion.h1>
 
@@ -81,11 +81,9 @@ export function Hero() {
               variants={fadeUp}
               initial="hidden"
               animate="show"
-              className="mt-4 max-w-xl text-base leading-relaxed text-white/70 xl:text-lg"
+              className="mt-2.5 max-w-xl text-sm leading-relaxed text-white/70 sm:mt-4 sm:text-base xl:text-lg"
             >
-              Get access to premium digital tools, productivity apps,
-              entertainment subscriptions and more — all in one place at the
-              best prices.
+              Get premium OTT, design, and AI subscriptions at unbeatable prices.
             </motion.p>
 
             {/* Feature pills */}
@@ -94,14 +92,17 @@ export function Hero() {
               variants={fadeUp}
               initial="hidden"
               animate="show"
-              className="mt-6 grid grid-cols-2 gap-x-5 gap-y-4 sm:flex sm:flex-nowrap sm:gap-5"
+              className="mt-4 grid grid-cols-2 gap-2 sm:mt-6 sm:flex sm:flex-wrap sm:gap-3"
             >
               {PILLS.map(({ icon: Icon, label }) => (
-                <div key={label} className="flex items-center gap-3">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-brand-500/40 bg-brand-500/10 text-brand-400">
-                    <Icon className="h-5 w-5" />
+                <div
+                  key={label}
+                  className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-2.5 py-2 sm:px-3 sm:py-2 backdrop-blur-sm transition-colors hover:border-brand-500/40 hover:bg-white/[0.07]"
+                >
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-brand-500/15 text-brand-400">
+                    <Icon className="h-3.5 w-3.5" />
                   </span>
-                  <span className="whitespace-pre-line text-sm font-semibold leading-tight">
+                  <span className="text-xs font-semibold text-white/90 sm:text-sm">
                     {label}
                   </span>
                 </div>
@@ -114,9 +115,9 @@ export function Hero() {
               variants={fadeUp}
               initial="hidden"
               animate="show"
-              className="mt-7"
+              className="mt-5 sm:mt-7"
             >
-              <WhatsAppButton className="w-full py-3.5 text-base sm:w-auto" />
+              <WhatsAppButton className="w-full justify-center py-3 text-base sm:w-auto sm:py-3.5" />
             </motion.div>
 
             {/* Social proof */}
@@ -125,20 +126,20 @@ export function Hero() {
               variants={fadeUp}
               initial="hidden"
               animate="show"
-              className="mt-5 flex items-center gap-4"
+              className="mt-4 flex items-center gap-3 sm:mt-5 sm:gap-4"
             >
-              <AvatarStack count={5} />
+              <AvatarStack count={5} borderColor="border-ink-950" />
               <div className="leading-tight">
-                <p className="text-lg font-bold">2,500+ Happy Members</p>
-                <p className="text-sm text-white/60">
-                  Join and get the latest offers now!
+                <p className="text-sm font-bold text-white sm:text-base">2,500+ Happy Members</p>
+                <p className="text-xs text-white/60 sm:text-sm">
+                  Join to access exclusive daily deals
                 </p>
               </div>
             </motion.div>
           </div>
 
           {/* Right: phone + floating icons */}
-          <div className="relative min-h-[680px] lg:min-h-0 lg:h-[84svh] lg:max-h-[760px]">
+          <div className="relative mt-4 min-h-[460px] sm:mt-8 sm:min-h-[580px] lg:mt-0 lg:min-h-0 lg:h-[84svh] lg:max-h-[760px]">
             <FloatingIcons />
             <div className="relative z-10 flex h-full items-center justify-center">
               <PhoneMockup />
