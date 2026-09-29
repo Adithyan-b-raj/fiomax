@@ -69,11 +69,11 @@ export function Hero() {
               variants={fadeUp}
               initial="hidden"
               animate="show"
-              className="mt-3.5 font-display text-[1.95rem] font-extrabold leading-[1.12] tracking-tight sm:mt-4 sm:text-5xl sm:leading-[1.05] lg:text-[2.9rem] xl:text-[3.25rem]"
+              className="mt-3.5 font-display text-[1.85rem] font-extrabold leading-[1.25] tracking-tight sm:mt-4 sm:text-5xl sm:leading-[1.18] lg:text-[2.9rem] xl:text-[3.25rem]"
             >
-              Need Digital Subscriptions{" "}
+              പ്രീമിയം Software Subscriptions{" "}
               <br className="hidden sm:block" />
-              <span className="text-gradient sm:whitespace-nowrap">at Affordable Prices?</span>
+              <span className="text-gradient sm:whitespace-nowrap">കുറഞ്ഞ വിലയിൽ ചെയ്യാം...</span>
             </motion.h1>
 
             <motion.p
