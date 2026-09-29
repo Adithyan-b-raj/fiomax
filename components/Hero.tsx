@@ -69,7 +69,7 @@ export function Hero() {
               variants={fadeUp}
               initial="hidden"
               animate="show"
-              className="mt-3.5 font-display text-[1.85rem] font-extrabold leading-[1.25] tracking-tight sm:mt-4 sm:text-5xl sm:leading-[1.18] lg:text-[2.9rem] xl:text-[3.25rem]"
+              className="mt-3.5 font-display text-[1.55rem] font-bold leading-[1.3] tracking-tight sm:mt-4 sm:text-3xl sm:leading-[1.25] lg:text-4xl xl:text-[2.65rem]"
             >
               പ്രീമിയം Software Subscriptions{" "}
               <br className="hidden sm:block" />
