@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 const WHATSAPP_URL = "https://chat.whatsapp.com/ESFA9jQV7WkIidGXQlhP7v?mode=ac_t";
@@ -33,12 +34,12 @@ export function WhatsAppButton({
   );
 }
 
-const AVATAR_TONES = [
-  "from-orange-200 to-orange-400",
-  "from-amber-200 to-amber-500",
-  "from-rose-200 to-orange-300",
-  "from-yellow-200 to-amber-400",
-  "from-orange-300 to-red-400",
+const AVATAR_IMAGES = [
+  "/avatars/avatar-1.jpg",
+  "/avatars/avatar-2.jpg",
+  "/avatars/avatar-3.jpg",
+  "/avatars/avatar-4.jpg",
+  "/avatars/avatar-5.jpg",
 ];
 
 /** Overlapping circular avatars used for social proof. */
@@ -56,18 +57,15 @@ export function AvatarStack({
       {Array.from({ length: count }).map((_, i) => (
         <div
           key={i}
-          className={`relative h-8 w-8 sm:h-9 sm:w-9 overflow-hidden rounded-full border-2 ${borderColor} bg-gradient-to-br ${
-            AVATAR_TONES[i % AVATAR_TONES.length]
-          } shadow-sm`}
+          className={`relative h-8 w-8 sm:h-9 sm:w-9 overflow-hidden rounded-full border-2 ${borderColor} bg-ink-800 shadow-sm`}
         >
-          <svg viewBox="0 0 40 40" className="h-full w-full text-white/90">
-            <circle cx="20" cy="14" r="6.5" fill="currentColor" opacity="0.85" />
-            <path
-              d="M7 36c0-7 6-12 13-12s13 5 13 12"
-              fill="currentColor"
-              opacity="0.85"
-            />
-          </svg>
+          <Image
+            src={AVATAR_IMAGES[i % AVATAR_IMAGES.length]}
+            alt={`Community member ${i + 1}`}
+            width={36}
+            height={36}
+            className="h-full w-full object-cover"
+          />
         </div>
       ))}
     </div>
