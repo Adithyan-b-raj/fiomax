@@ -33,8 +33,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        display: ["var(--font-poppins)", "var(--font-inter)", "sans-serif"],
+        sans: ["var(--font-inter)", "'Anek Malayalam'", "'Noto Sans Malayalam'", "system-ui", "sans-serif"],
+        display: ["var(--font-poppins)", "'Anek Malayalam'", "'Noto Sans Malayalam'", "var(--font-inter)", "sans-serif"],
       },
       backgroundImage: {
         "brand-gradient":

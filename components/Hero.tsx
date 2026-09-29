@@ -71,9 +71,9 @@ export function Hero() {
               animate="show"
               className="mt-3.5 font-display text-[1.65rem] font-extrabold leading-[1.3] tracking-normal sm:mt-4 sm:text-3xl sm:leading-[1.25] lg:text-4xl xl:text-[2.75rem]"
             >
-              <span className="font-black">പ്രീമിയം</span> Software Subscriptions{" "}
+              പ്രീമിയം Software Subscriptions{" "}
               <br className="hidden sm:block" />
-              <span className="text-gradient font-black sm:whitespace-nowrap">
+              <span className="text-gradient sm:whitespace-nowrap">
                 കുറഞ്ഞ വിലയിൽ ചെയ്യാം...
               </span>
             </motion.h1>
