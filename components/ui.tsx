@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 
-const WHATSAPP_URL = "https://chat.whatsapp.com/";
+const WHATSAPP_URL = "https://chat.whatsapp.com/ESFA9jQV7WkIidGXQlhP7v?mode=ac_t";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
