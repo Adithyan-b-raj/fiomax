@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
-const WHATSAPP_URL = "https://chat.whatsapp.com/ESFA9jQV7WkIidGXQlhP7v?mode=ac_t";
+const WHATSAPP_URL = "https://chat.whatsapp.com/IlMvTBm1ubBHA8i0icoAlM";
 const WHATSAPP_CONTACT_URL = "https://wa.me/918590967062";
 const INSTAGRAM_URL = "https://www.instagram.com/fiomax_store?stkn=MWVlczM4bHVqYTV3dA==";
 
